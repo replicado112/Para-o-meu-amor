@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossa História ❤️</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- INTRO CINEMATOGRÁFICA -->
+  <section id="intro">
+    <div class="intro-overlay"></div>
+
+    <div class="intro-content">
+      <h1 class="intro-title">Para você ❤️</h1>
+      <p class="intro-text">Existe uma história que eu preciso te mostrar...</p>
+
+      <button id="startBtn">Começar</button>
+    </div>
+  </section>
+
+  <!-- PARTICULAS / CORAÇÕES -->
+  <div id="hearts"></div>
+  <div id="particles"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="mainContent" class="hidden">
+
+    <!-- HERO / GALERIA -->
+    <section id="hero" class="reveal">
+  <h2>Nossos Momentos 💖</h2>
+
+  <div class="carousel" id="carousel">
+
+    <div class="media-item">
+      <img src="https://i.imgur.com/yveRI5C.jpeg" alt="foto 1">
+    </div>
+
+    <div class="media-item">
+      <img src="https://i.imgur.com/Vq9rjyT.jpeg" alt="foto 2">
+    </div>
+
+    <div class="media-item">
+      <img src="https://i.imgur.com/Gj2U2f8.jpeg" alt="foto 3">
+    </div>
+
+<!--   <div class="media-item"> 
+      <video src="https://i.imgur.com/5GjPGNf.mp4"></video>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- MODAL FULLSCREEN -->
+<div id="modal" class="modal hidden">
+  <span id="closeModal">&times;</span>
+  <div id="modalContent"></div>
+  <button id="downloadBtn">Baixar</button>
+</div>
+
+    <!-- TEXTO -->
+    <section id="letter" class="reveal">
+  <div class="paper">
+    <h2>Para você ❤️</h2>
+
+    <p id="typewriter"></p>
+  </div>
+</section>
+
+<section id="counter" class="reveal">
+  <h2>Estamos juntos há:</h2>
+  <div id="timeTogether"></div>
+</section>
+
+  </main>
+
+  <script src="assets/js/app.js"></script>
+
+<audio id="bgMusic" loop>
+  <source src="assets/audio/music.mp3" type="audio/mp3">
+</audio>
+
+<section id="final" class="final-scene reveal">
+  <div class="final-content">
+    <h1>Obrigado por fazer parte da minha vida ❤️</h1>
+    <p>Essa é só uma pequena parte do que eu sinto por você...</p>
+
+    <button id="restartBtn">Rever nossa história</button>
+  </div>
+</section>
+
+</body>
+</html>
