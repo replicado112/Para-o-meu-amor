@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0b0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle at center, #ff4d6d, #0b0b0f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 999;
+}
+
+.intro-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-title {
+  font-size: 3rem;
+  color: #fff;
+  animation: fadeIn 2s ease;
+}
+
+.intro-text {
+  margin-top: 10px;
+  color: #ffe3ea;
+}
+
+#startBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff2e63;
+  color: white;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  background: #ff5c8a;
+}
+
+/* MAIN */
+.hidden {
+  display: none;
+}
+
+#hero {
+  padding: 50px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.item {
+  min-width: 200px;
+  height: 150px;
+  background: #222;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARTA */
+.paper {
+  margin: 50px;
+  padding: 30px;
+  background: #ffd1dc;
+  color: #000;
+  border-radius: 10px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* CORAÇÕES CAINDO */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff2e63;
+  font-size: 20px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* MELHORIA INTRO TRANSIÇÃO */
+#intro {
+  transition: opacity 1s ease;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.media-item {
+  min-width: 250px;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition: transform 0.3s;
+  background: #222;
+}
+
+.media-item:hover {
+  transform: scale(1.05);
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+.modal img,
+.modal video {
+  max-width: 80%;
+  max-height: 70%;
+  border-radius: 10px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#downloadBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff2e63;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* CARTA MAIS ROMÂNTICA */
+.paper {
+  margin: 50px;
+  padding: 30px;
+  background: #ffd1dc;
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* CONTADOR */
+#counter {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* FUNDO MAIS CINEMATOGRÁFICO */
+body {
+  background: radial-gradient(circle at top, #1a0b12, #05050a);
+}
+
+/* PARTÍCULAS */
+.particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* MELHORIA DE PROFUNDIDADE */
+#hero, #letter, #counter {
+  position: relative;
+  z-index: 2;
+}
+
+/* suavização geral */
+* {
+  scroll-behavior: smooth;
+}
+
+/* leve brilho nos textos principais */
+h1, h2 {
+  text-shadow: 0 0 10px rgba(255, 46, 99, 0.4);
+}
+
+/* ELEMENTOS OCULTOS INICIALMENTE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+/* ELEMENTOS VISÍVEIS */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TRANSIÇÃO CINEMATOGRÁFICA ENTRE SEÇÕES */
+section {
+  padding: 80px 20px;
+  transition: all 0.8s ease;
+}
+
+/* suaviza contraste entre seções */
+section {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* destaque suave em hover de textos */
+p:hover {
+  color: #ff9bb2;
+  transition: 0.3s;
+}
+
+/* CENA FINAL */
+.final-scene {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #ff2e63, #0b0b0f);
+  color: white;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: all 1.5s ease;
+}
+
+.final-scene.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.final-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 46, 99, 0.6);
+}
+
+.final-content p {
+  margin-bottom: 30px;
+  color: #ffd1dc;
+}
+
+#restartBtn {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #ff2e63;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#restartBtn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .carousel {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .media-item {
+    min-width: 180px;
+    height: 140px;
+  }
+
+  .final-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 🔥 FADE OUT CINEMATOGRÁFICO */
+body.fade-out {
+  animation: fadeOutScene 1.2s ease forwards;
+}
+
+@keyframes fadeOutScene {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(1.02);
+  }
+}
+
+.burst-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+
+/* texto responsivo inteligente */
+p {
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.paper {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  font-size: clamp(15px, 2.5vw, 18px);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .paper {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
+#timeTogether {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,46,99,0.4);
+}
